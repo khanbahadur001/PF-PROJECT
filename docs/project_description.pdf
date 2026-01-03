@@ -1,0 +1,33 @@
+Project: Library Management System
+
+Course: Programming Fundamentals — Mini Project
+Date: January 2026
+
+Team Members and Roles
+- Yaseen Ahmad Khan Wazir — Group Leader (Menu & Interface, integration)
+- Hafsa Urooj — Core Logic (data structures and operations)
+- Khan Bahadur — File I/O & Persistence (load/save, parsing)
+- Marukh Qamar — Documentation & Testing
+
+Project Summary
+This project implements a menu-driven Library Management System in C++ demonstrating core programming fundamentals taught in the course. The system supports adding, viewing, searching, updating, and deleting books. Data persistence is provided using a simple pipe-separated text file (`library.txt`).
+
+Functional Requirements Covered
+- User input and output via console
+- Conditional statements and switch-case menu
+- Loops for iterating over collections
+- Functions for modular code (add, display, search, update, delete)
+- Use of arrays/lists: `std::vector<Book>`
+- File handling: `loadLibrary()` and `saveLibrary()` in `fileio.cpp`
+- Input validation and error handling (numeric checks, range checks)
+- Menu-driven program flow with save-on-exit
+
+Design Notes
+- Data model: `Book` struct (`book.h`) with `bookID`, `title`, `author`, `quantity`.
+- Persistence format: `bookID|title|author|quantity` per line in `library.txt`.
+- Team workflow: Each member worked on a separate branch and made multiple meaningful commits. See `CONTRIBUTORS.md` and `docs/commit_examples.md` for the commit history and branch naming guidelines.
+
+How to Run
+From `src` folder compile with:
+g++ main.cpp fileio.cpp -o library.exe
+Run `library.exe` to start. The program will attempt to load `library.txt` from the same folder.
